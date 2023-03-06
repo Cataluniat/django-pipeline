@@ -1,23 +1,26 @@
 Django Pipeline
 
-Secrets
+## Setup Secrets
+```sh 
 DOCKER_USERNAME
 DOCKER_PASSWORD
 HOST = ssh host
 USERNAME = ssh username
 KEY ssh private key
-
+```
+## Setup Secrets
 Edit `.github/workflow/push.yml`
 
+```sh 
 image: docker-user/docker-repo
+```
 
-
-## Deploy infrastructure
+## Deploy
 ```sh
 ./deploy.sh
 ```
 
-### Connecting to your Linux instance using SSH
+### SSH login in instance
 ```sh
 ssh -i ./tf/private/key_access.pem -A ubuntu@[instance IP]
 ```
